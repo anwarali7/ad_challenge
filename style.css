@@ -1,0 +1,160 @@
+@font-face {
+  font-family: GeogrotesqueSb;
+  src: url("./assets/FontsFree-Net-Geogtq-Sb.otf") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.ad-container {
+  position: relative;
+  background: repeat-y url(assets/background.png);
+  background-size: 100%;
+  height: 100vh;
+}
+
+.logo-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 3vw;
+  padding-bottom: 9vw;
+}
+
+.logo-container img {
+  width: 30%;
+  margin-left: 7vw;
+}
+
+/* Pour cacher les bords noirs en haut et en bas de la vidéo. */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 42%;
+  margin-bottom: 10%;
+}
+
+.video-container video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  object-fit: cover;
+  transition: height 0.5s linear;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  bottom: 17vw;
+}
+
+.product {
+  display: inline-block;
+  margin-left: 10vw;
+}
+
+.product img {
+  width: 22vw;
+}
+
+.reduction {
+  display: inline-block;
+  margin-left: 5%;
+  width: 50%;
+  height: 40vw;
+  background-image: linear-gradient(90deg, #ab8d58 0%, #f9ddaf 27%, #ab8d58 55%, #f9ddaf 100%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-mask-image: url("./assets/reduction.png");
+  mask-image: url("./assets/reduction.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.arrowup {
+  position: absolute;
+  bottom: 13vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 9vw;
+  animation: arrow-jump 2s infinite linear;
+}
+
+@keyframes arrow-jump {
+  0%, 20%, 40%, 100% {
+    transform: translateY(1vw);
+  }
+
+  10%, 30% {
+    transform: translateY(-1vw);
+  }
+}
+
+.under {
+  position: absolute;
+  bottom: 8vw;
+  width: 100%;
+  height: 0;
+  left:0;
+  right:0;
+  text-align: center;
+  color: white;
+}
+
+.under p {
+  font-family: "GeogrotesqueSb";
+  font-size: 4.5vw;
+  color: white;
+  text-transform: uppercase;
+}
+
+.adresse {
+  margin-top: 2vw;
+}
+
+.adresse p {
+  font-size: 4vw;
+}
+
+.map {
+  width: 40vw;
+  height: 40vw;
+  max-width: 40vw;
+  max-height: 40vw;
+  margin: 5vw auto 0 auto;
+  border: solid 1px white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ellipse {
+  position: fixed;
+  bottom: -10vw;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  height: 20vw;
+  background-image: linear-gradient(90deg, #ab8d58 0%, #f9ddaf 27%, #ab8d58 55%, #f9ddaf 100%);
+  border-radius: 100vw/20vw;
+}
+
+.ellipse p {
+  font-family: "GeogrotesqueSb";
+  font-size: 7vw;
+  color: black;
+  text-transform: uppercase;
+  margin-top: 1vw;
+}
